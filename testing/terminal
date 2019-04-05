@@ -1,0 +1,9 @@
+g++ prog.cpp -o run.out
+
+g++ progOther.cpp -o runOther.out
+
+./run.out < input.txt > correct.txt
+
+./runOther.out < input.txt > other.txt
+
+diff <(head -n 1 other.txt) <(head -n 1 correct.txt)
